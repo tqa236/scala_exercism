@@ -8,17 +8,17 @@ class SumOfMultiplesTest extends FunSuite with Matchers {
   }
 
   test("multiples of 3 or 5 up to 4") {
-    pending
+    // pending
     SumOfMultiples.sum(Set(3, 5), 4) should be(3)
   }
 
   test("multiples of 3 up to 7") {
-    pending
+    // pending
     SumOfMultiples.sum(Set(3), 7) should be(9)
   }
 
   test("multiples of 3 or 5 up to 10") {
-    pending
+    // pending
     SumOfMultiples.sum(Set(3, 5), 10) should be(23)
   }
 
