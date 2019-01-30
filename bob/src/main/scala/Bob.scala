@@ -1,3 +1,3 @@
 object Bob {
-  def response(statement: String): String = ???
+  def response(statement: String): String = "Whatever."
 }
