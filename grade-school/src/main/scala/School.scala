@@ -1,11 +1,22 @@
+import scala.collection.immutable.ListMap
+
 class School {
-  type DB = Map[Int, Seq[String]]
+    type DB = Map[Int, Seq[String]]
 
-  def add(name: String, g: Int) = ???
+    var grade_school: DB = Map()
 
-  def db: DB = ???
+    def add(name: String, g: Int) =  grade_school.get(g) match {
+        case Some(xs:Seq[String]) => grade_school += (g -> (xs :+ name))
+        case None => grade_school += (g -> Seq(name))
+    }
 
-  def grade(g: Int): Seq[String] = ???
+    def db: DB = grade_school
 
-  def sorted: DB = ???
+    def grade(g: Int): Seq[String] = grade_school.get(g) match {
+        case Some(xs:Seq[String]) => xs
+        case None => Seq()
+    }
+
+    def sorted: DB = ListMap(grade_school.toSeq.sortBy(_._1):_*)
+                            .mapValues(_.sorted)
 }
