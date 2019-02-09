@@ -8,7 +8,7 @@ class PrimeFactorsTest extends FunSuite with Matchers {
   }
 
   test("prime number") {
-    pending
+    // pending
     PrimeFactors.factors(2) should be(List(2))
   }
 
