@@ -4,7 +4,7 @@ scala:
 - 2.11.8
 jdk:
 - oraclejdk8
-before_script:
+# before_script:
 # - sbt test:compile
 script:
 # - sbt test
@@ -12,6 +12,7 @@ script:
     [ -d "${path}" ] || continue # if not a directory, skip
     dirname="$(basename "${path}")"
     cd "$dirname" || return
+    sbt test:compile
     sbt test
     fi
   done
