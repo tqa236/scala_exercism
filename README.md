@@ -1,1 +1,3 @@
-# scala_exercism
+# Scala Exercism
+
+Solutions for Scala track on Exercism

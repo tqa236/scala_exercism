@@ -5,6 +5,13 @@ scala:
 jdk:
 - oraclejdk8
 before_script:
-- sbt test:compile
+# - sbt test:compile
 script:
-- sbt test
+# - sbt test
+- for path in */; do
+    [ -d "${path}" ] || continue # if not a directory, skip
+    dirname="$(basename "${path}")"
+    cd "$dirname" || return
+    sbt test
+    fi
+  done
