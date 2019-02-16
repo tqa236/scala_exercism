@@ -9,6 +9,20 @@ class AccumulateTest extends FlatSpec with Matchers {
     accumulation should be (List.empty)
   }
 
+  it should "accumulate squares temp 2" in {
+    // pending
+    val accumulate = new Accumulate
+    val accumulation = accumulate.accumulate[Int, Int](x => x * x, List(1))
+    accumulation should be (List(1))
+  }
+
+  it should "accumulate squares temp" in {
+    // pending
+    val accumulate = new Accumulate
+    val accumulation = accumulate.accumulate[Int, Int](x => x * x, List(1, 2, 3, 4, 5))
+    accumulation should be (List(1, 4, 9, 16, 25))
+  }
+
   it should "accumulate squares" in {
     // pending
     val accumulate = new Accumulate
