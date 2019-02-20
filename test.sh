@@ -3,7 +3,6 @@
 for path in */; do
     [ -d "${path}" ] || continue # if not a directory, skip
     dirname="$(basename "${path}")"
-    pwc
     cd "$dirname" || return
     sbt test
     cd .. || return
