@@ -1,23 +1,7 @@
-sudo: false
 language: scala
+
 scala:
-- 2.11.8
-jdk:
-- oraclejdk8
-before_script:
-- for path in */; do
-    [ -d "${path}" ] || continue # if not a directory, skip
-    dirname="$(basename "${path}")"
-    cd "$dirname" || return
-    sbt test:compile
-    fi
-  done
+  - 2.11.8
+
 script:
-- for path in */; do
-    [ -d "${path}" ] || continue # if not a directory, skip
-    dirname="$(basename "${path}")"
-    cd "$dirname" || return
-    sbt test:compile
-    sbt test
-    fi
-  done
+  - ./test.sh
