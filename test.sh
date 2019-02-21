@@ -3,7 +3,7 @@
 for path in */; do
     [ -d "${path}" ] || continue # if not a directory, skip
     dirname="$(basename "${path}")"
-    cd "$dirname" || return
+    cd "$dirname" || exit
     sbt test
-    cd .. || return
+    cd .. || exit
 done
