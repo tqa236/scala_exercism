@@ -38,31 +38,13 @@ case class Robot (direction: Bearing, position: (Int, Int)){
         Robot(direction, newPosition)
     }
 
-    def simulate(actions: String): Robot = {
-        actions.toList match {
-            case List() => Robot(direction, position)
-            case x :: tail => x match {
-                case 'R' => Robot(direction, position).turnRight.simulate(tail.mkString)
-                case 'L' => Robot(direction, position).turnLeft.simulate(tail.mkString)
-                case _ => Robot(direction, position).advance.simulate(tail.mkString)
-            }
-
-        }
-
+    def move(robot: Robot, action: Char): Robot = action match {
+        case 'R' => robot.turnRight
+        case 'L' => robot.turnLeft
+        case _ => robot.advance
     }
 
-}
+    def simulate(actions: String): Robot =
+        actions.foldLeft(Robot(direction, position))(move)
 
-// object Robot{
-// // object Robot extends ((Bearing, (Int, Int)) => Robot) {
-//     def turnRight(robot: Robot): Robot = {
-//         val newDirection = robot.bearing match {
-//             case Bearing.North => Bearing.East
-//             case Bearing.East => Bearing.South
-//             case Bearing.South => Bearing.West
-//             case Bearing.West => Bearing.North
-//         }
-//         return Robot(newDirection, robot.coordinates)
-//     }
-//
-// }
+}
