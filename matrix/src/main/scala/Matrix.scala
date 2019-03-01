@@ -1,7 +1,7 @@
 case class Matrix(matrix: String) {
-    val rows = matrix.split("\n")
-                     .map(_.split(" ").map(_.toInt).to[Vector])
-                     .to[Vector]
+    private val rows = matrix.lines
+                     .map(_.split(" ").map(_.toInt).toVector)
+                     .toVector
 
     def row(n: Int): Vector[Int] = rows(n)
 
