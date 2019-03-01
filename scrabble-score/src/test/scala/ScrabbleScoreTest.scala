@@ -8,52 +8,52 @@ class ScrabbleScoreTest extends FunSuite with Matchers {
   }
 
   test("uppercase letter") {
-    pending
+    // pending
     ScrabbleScore.score("A") should be(1)
   }
 
   test("valuable letter") {
-    pending
+    // pending
     ScrabbleScore.score("f") should be(4)
   }
 
   test("short word") {
-    pending
+    // pending
     ScrabbleScore.score("at") should be(2)
   }
 
   test("short, valuable word") {
-    pending
+    // pending
     ScrabbleScore.score("zoo") should be(12)
   }
 
   test("medium word") {
-    pending
+    // pending
     ScrabbleScore.score("street") should be(6)
   }
 
   test("medium, valuable word") {
-    pending
+    // pending
     ScrabbleScore.score("quirky") should be(22)
   }
 
   test("long, mixed-case word") {
-    pending
+    // pending
     ScrabbleScore.score("OxyphenButazone") should be(41)
   }
 
   test("english-like word") {
-    pending
+    // pending
     ScrabbleScore.score("pinata") should be(8)
   }
 
   test("empty input") {
-    pending
+    // pending
     ScrabbleScore.score("") should be(0)
   }
 
   test("entire alphabet available") {
-    pending
+    // pending
     ScrabbleScore.score("abcdefghijklmnopqrstuvwxyz") should be(87)
   }
 }
