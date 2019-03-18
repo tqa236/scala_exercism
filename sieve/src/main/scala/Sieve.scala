@@ -6,7 +6,7 @@ object Sieve{
 
     def nextPrime(primes: List[Int], numbers: List[Int]): List[Int] = {
         if (numbers == Nil) primes
-        else{
+        else {
             val prime = numbers.head
             nextPrime(primes :+ prime, numbers.filter(_ % prime != 0))
         }

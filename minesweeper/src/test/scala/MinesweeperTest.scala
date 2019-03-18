@@ -8,12 +8,12 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("no columns") {
-    pending
+    // pending
     Minesweeper.annotate(List("")) should be(List(""))
   }
 
   test("no mines") {
-    pending
+    // pending
     Minesweeper.annotate(List("   ",
                               "   ",
                               "   ")) should be(
@@ -23,7 +23,7 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("minefield with only mines") {
-    pending
+    // pending
     Minesweeper.annotate(List("***",
                               "***",
                               "***")) should be(
@@ -33,7 +33,7 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("mine surrounded by spaces") {
-    pending
+    // pending
     Minesweeper.annotate(List("   ",
                               " * ",
                               "   ")) should be(
@@ -43,7 +43,7 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("space surrounded by mines") {
-    pending
+    // pending
     Minesweeper.annotate(List("***",
                               "* *",
                               "***")) should be(
@@ -53,17 +53,17 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("horizontal line") {
-    pending
+    // pending
     Minesweeper.annotate(List(" * * ")) should be(List("1*2*1"))
   }
 
   test("horizontal line, mines at edges") {
-    pending
+    // pending
     Minesweeper.annotate(List("*   *")) should be(List("*1 1*"))
   }
 
   test("vertical line") {
-    pending
+    // pending
     Minesweeper.annotate(List(" ",
                               "*",
                               " ",
@@ -77,7 +77,7 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("vertical line, mines at edges") {
-    pending
+    // pending
     Minesweeper.annotate(List("*",
                               " ",
                               " ",
@@ -91,7 +91,7 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("cross") {
-    pending
+    // pending
     Minesweeper.annotate(List("  *  ",
                               "  *  ",
                               "*****",
@@ -105,7 +105,7 @@ class MinesweeperTest extends FunSuite with Matchers {
   }
 
   test("large minefield") {
-    pending
+    // pending
     Minesweeper.annotate(List(" *  * ",
                               "  *   ",
                               "    * ",
