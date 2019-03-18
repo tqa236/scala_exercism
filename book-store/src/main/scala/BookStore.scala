@@ -2,8 +2,8 @@ object BookStore {
     def total(books: List[Int]): Int = {
         if (books == List()) return 0
         val quantity = books.groupBy(identity).mapValues(_.size)
-        // if (quantity.min._2 > 0)
-
+        val quantityList = quantity.toList.sortBy(_._2).map(_._2)
+        println(quantityList)
         quantity.size match {
             // case 0 => 0
             case 1 => 800
