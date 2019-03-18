@@ -8,107 +8,107 @@ class PigLatinTest extends FunSuite with Matchers {
   }
 
   test("word beginning with e") {
-    pending
+    // pending
     PigLatin.translate("ear") should be("earay")
   }
 
   test("word beginning with i") {
-    pending
+    // pending
     PigLatin.translate("igloo") should be("iglooay")
   }
 
   test("word beginning with o") {
-    pending
+    // pending
     PigLatin.translate("object") should be("objectay")
   }
 
   test("word beginning with u") {
-    pending
+    // pending
     PigLatin.translate("under") should be("underay")
   }
 
   test("word beginning with a vowel and followed by a qu") {
-    pending
+    // pending
     PigLatin.translate("equal") should be("equalay")
   }
 
   test("word beginning with p") {
-    pending
+    // pending
     PigLatin.translate("pig") should be("igpay")
   }
 
   test("word beginning with k") {
-    pending
+    // pending
     PigLatin.translate("koala") should be("oalakay")
   }
 
   test("word beginning with x") {
-    pending
+    // pending
     PigLatin.translate("xenon") should be("enonxay")
   }
 
   test("word beginning with q without a following u") {
-    pending
+    // pending
     PigLatin.translate("qat") should be("atqay")
   }
 
   test("word beginning with ch") {
-    pending
+    // pending
     PigLatin.translate("chair") should be("airchay")
   }
 
   test("word beginning with qu") {
-    pending
+    // pending
     PigLatin.translate("queen") should be("eenquay")
   }
 
   test("word beginning with qu and a preceding consonant") {
-    pending
+    // pending
     PigLatin.translate("square") should be("aresquay")
   }
 
   test("word beginning with th") {
-    pending
+    // pending
     PigLatin.translate("therapy") should be("erapythay")
   }
 
   test("word beginning with thr") {
-    pending
+    // pending
     PigLatin.translate("thrush") should be("ushthray")
   }
 
   test("word beginning with sch") {
-    pending
+    // pending
     PigLatin.translate("school") should be("oolschay")
   }
 
   test("word beginning with yt") {
-    pending
+    // pending
     PigLatin.translate("yttria") should be("yttriaay")
   }
 
   test("word beginning with xr") {
-    pending
+    // pending
     PigLatin.translate("xray") should be("xrayay")
   }
 
   test("y is treated like a consonant at the beginning of a word") {
-    pending
+    // pending
     PigLatin.translate("yellow") should be("ellowyay")
   }
 
   test("y is treated like a vowel at the end of a consonant cluster") {
-    pending
+    // pending
     PigLatin.translate("rhythm") should be("ythmrhay")
   }
 
   test("y as second letter in two letter word") {
-    pending
+    // pending
     PigLatin.translate("my") should be("ymay")
   }
 
   test("a whole phrase") {
-    pending
+    // pending
     PigLatin.translate("quick fast run") should be("ickquay astfay unray")
   }
 }
