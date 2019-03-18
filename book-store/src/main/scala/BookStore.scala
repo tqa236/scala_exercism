@@ -4,6 +4,9 @@ object BookStore {
         val quantity = books.groupBy(identity).mapValues(_.size)
         val quantityList = quantity.toList.sortBy(_._2).map(_._2)
         println(quantityList)
+        println(quantityList.max)
+        println(quantityList.count(_ == quantityList.max))
+
         quantity.size match {
             // case 0 => 0
             case 1 => 800
