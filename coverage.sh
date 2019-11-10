@@ -7,5 +7,4 @@ for path in */; do
     cd "$dirname" || exit
     sbt clean coverage test coverageReport
     cd .. || exit
-    exit
 done

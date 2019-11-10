@@ -6,5 +6,4 @@ for path in */; do
     cd "$dirname" || exit
     sbt test
     cd .. || exit
-    exit
 done
