@@ -5,6 +5,6 @@ for path in */; do
     dirname="$(basename "${path}")"
     cp "plugins.sbt" "$dirname/project/plugins.sbt"
     cd "$dirname" || exit
-    sbt clean coverage test coverageReport
+    sbt clean coverage test coverageReport && sbt coverageAggregate
     cd .. || exit
 done

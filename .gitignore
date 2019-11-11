@@ -19,3 +19,4 @@ project/plugins/project/
 
 **/.exercism/*
 **/project/target/*
+**/project/project/*

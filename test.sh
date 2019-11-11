@@ -4,6 +4,6 @@ for path in */; do
     [ -d "${path}" ] || continue # if not a directory, skip
     dirname="$(basename "${path}")"
     cd "$dirname" || exit
-    sbt test
+    sbt clean coverage test coverageReport && sbt coverageAggregate
     cd .. || exit
 done
