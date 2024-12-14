@@ -1,11 +1,25 @@
-import scala.math.max
-
 object PythagoreanTriplet {
-    def isPythagorean(sides: (Int, Int, Int)): Boolean = {
-        def sqr(x: Int) = x * x
-        val maxValue = max(max(sides._1, sides._2), sides._3)
-        2 * sqr(maxValue) == sqr(sides._1) + sqr(sides._2) + sqr(sides._3)
-    }
 
-    def pythagoreanTriplets(start: Int, end: Int): Seq[(Int, Int, Int)] = Seq()
+  def isPythagorean(triplet: (Int, Int, Int)): Boolean = {
+    val (a, b, c) = triplet
+    a * a + b * b == c * c
+  }
+
+  def pythagoreanTriplets(start: Int, end: Int): Seq[(Int, Int, Int)] = {
+    for {
+      a <- start to end
+      b <- a + 1 to end
+      c <- b + 1 to end
+      if isPythagorean((a, b, c))
+    } yield (a, b, c)
+  }
+
+  def pythagoreanTripletsSum(N: Int): Seq[(Int, Int, Int)] = {
+    for {
+      a <- 1 until N
+      b <- a + 1 until N - a
+      c = N - a - b
+      if c > b && isPythagorean((a, b, c))
+    } yield (a, b, c)
+  }
 }
