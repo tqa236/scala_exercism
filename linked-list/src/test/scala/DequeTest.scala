@@ -1,7 +1,9 @@
-import org.scalatest.{Matchers, FlatSpec}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
+
 
 /** @version created manually **/
-class DequeTest extends FlatSpec with Matchers {
+class DequeTest extends AnyFlatSpec with Matchers {
 
   it should "handle push then pop" in {
     val deque = Deque[Char]()
@@ -13,7 +15,7 @@ class DequeTest extends FlatSpec with Matchers {
   }
 
   it should "handle push then shift" in {
-    // pending
+    pending
     val deque = Deque[Char]()
     deque.push('a')
     deque.push('b')
@@ -23,7 +25,7 @@ class DequeTest extends FlatSpec with Matchers {
   }
 
   it should "handle unshift then shift" in {
-    // pending
+    pending
     val deque = Deque[Char]()
     deque.unshift('a')
     deque.unshift('b')
@@ -32,7 +34,7 @@ class DequeTest extends FlatSpec with Matchers {
   }
 
   it should "handle unshift then pop" in {
-    // pending
+    pending
     val deque = Deque[Char]()
     deque.unshift('a')
     deque.unshift('b')
@@ -41,7 +43,7 @@ class DequeTest extends FlatSpec with Matchers {
   }
 
   it should "handle complex interaction" in {
-    // pending
+    pending
     val deque = Deque[Int]()
     deque.push(1)
     deque.push(2)

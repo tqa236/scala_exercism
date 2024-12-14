@@ -1,11 +1,16 @@
 # Variable Length Quantity
 
+Welcome to Variable Length Quantity on Exercism's Scala Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 Implement variable length quantity encoding and decoding.
 
-The goal of this exercise is to implement [VLQ](https://en.wikipedia.org/wiki/Variable-length_quantity) encoding/decoding.
+The goal of this exercise is to implement [VLQ][vlq] encoding/decoding.
 
 In short, the goal of this encoding is to encode integer values in a way that would save bytes.
-Only the first 7 bits of each byte is significant (right-justified; sort of like an ASCII byte).
+Only the first 7 bits of each byte are significant (right-justified; sort of like an ASCII byte).
 So, if you have a 32-bit value, you have to unpack it into a series of 7-bit bytes.
 Of course, you will have a variable number of bytes depending upon your integer.
 To indicate which is the last byte of the series, you leave bit #7 clear.
@@ -31,23 +36,22 @@ Here are examples of integers as 32-bit values, and the variable length quantiti
 0FFFFFFF          FF FF FF 7F
 ```
 
-## Hints
+[vlq]: https://en.wikipedia.org/wiki/Variable-length_quantity
+
 Remember that in Scala there are two forms of the right shift operator. The `>>` operator preserves the sign, while `>>>` zeroes the leftmost bits.
-
-
-The Scala exercises assume an SBT project scheme. The exercise solution source
-should be placed within the exercise directory/src/main/scala. The exercise
-unit tests can be found within the exercise directory/src/test/scala.
-
-To run the tests simply run the command `sbt test` in the exercise directory.
-
-For more detailed info about the Scala track see the [help
-page](http://exercism.io/languages/scala).
-
 
 ## Source
 
-A poor Splice developer having to implement MIDI encoding/decoding. [https://splice.com](https://splice.com)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @ricemery
+
+### Contributed to by
+
+- @ErikSchierboom
+- @ppartarr
+- @rajeshpg
+
+### Based on
+
+A poor Splice developer having to implement MIDI encoding/decoding. - https://splice.com
