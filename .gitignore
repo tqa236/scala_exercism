@@ -20,3 +20,7 @@ project/plugins/project/
 **/.exercism/*
 **/project/target/*
 **/project/project/*
+
+.vscode
+.metals
+project/.bloop
