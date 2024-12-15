@@ -1,7 +1,11 @@
 # Matrix
 
-Given a string representing a matrix of numbers, return the rows and columns of
-that matrix.
+Welcome to Matrix on Exercism's Scala Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
+Given a string representing a matrix of numbers, return the rows and columns of that matrix.
 
 So given a string with embedded newlines like:
 
@@ -14,19 +18,17 @@ So given a string with embedded newlines like:
 representing this matrix:
 
 ```text
-    0  1  2
+    1  2  3
   |---------
-0 | 9  8  7
-1 | 5  3  2
-2 | 6  6  7
+1 | 9  8  7
+2 | 5  3  2
+3 | 6  6  7
 ```
 
 your code should be able to spit out:
 
-- A list of the rows, reading each row left-to-right while moving
-  top-to-bottom across the rows,
-- A list of the columns, reading each column top-to-bottom while moving
-  from left-to-right.
+- A list of the rows, reading each row left-to-right while moving top-to-bottom across the rows,
+- A list of the columns, reading each column top-to-bottom while moving from left-to-right.
 
 The rows for our example matrix:
 
@@ -40,19 +42,18 @@ And its columns:
 - 8, 3, 6
 - 7, 2, 7
 
-The Scala exercises assume an SBT project scheme. The exercise solution source
-should be placed within the exercise directory/src/main/scala. The exercise
-unit tests can be found within the exercise directory/src/test/scala.
-
-To run the tests simply run the command `sbt test` in the exercise directory.
-
-For more detailed info about the Scala track see the [help
-page](http://exercism.io/languages/scala).
-
-
 ## Source
 
-Warmup to the `saddle-points` warmup. [http://jumpstartlab.com](http://jumpstartlab.com)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @ricemery
+
+### Contributed to by
+
+- @ErikSchierboom
+- @ppartarr
+- @rajeshpg
+
+### Based on
+
+Exercise by the JumpstartLab team for students at The Turing School of Software and Design. - https://turing.edu
