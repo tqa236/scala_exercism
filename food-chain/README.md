@@ -1,12 +1,15 @@
 # Food Chain
 
+Welcome to Food Chain on Exercism's Scala Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'.
 
-While you could copy/paste the lyrics,
-or read them from a file, this problem is much more
-interesting if you approach it algorithmically.
+While you could copy/paste the lyrics, or read them from a file, this problem is much more interesting if you approach it algorithmically.
 
-This is a [cumulative song](http://en.wikipedia.org/wiki/Cumulative_song) of unknown origin.
+This is a [cumulative song][cumulative-song] of unknown origin.
 
 This is one of many common variants.
 
@@ -63,19 +66,20 @@ I know an old lady who swallowed a horse.
 She's dead, of course!
 ```
 
-The Scala exercises assume an SBT project scheme. The exercise solution source
-should be placed within the exercise directory/src/main/scala. The exercise
-unit tests can be found within the exercise directory/src/test/scala.
-
-To run the tests simply run the command `sbt test` in the exercise directory.
-
-For more detailed info about the Scala track see the [help
-page](http://exercism.io/languages/scala).
-
+[cumulative-song]: https://en.wikipedia.org/wiki/Cumulative_song
 
 ## Source
 
-Wikipedia [http://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly](http://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @ricemery
+
+### Contributed to by
+
+- @ErikSchierboom
+- @ppartarr
+- @rajeshpg
+
+### Based on
+
+Wikipedia - https://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly
