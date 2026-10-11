@@ -12,8 +12,8 @@ object Queen {
 
 object QueenAttack {
   def canAttack(q1: Queen, q2: Queen): Boolean = {
-    q1.row == q2.row || 
-    q1.column == q2.column || 
-    math.abs(q1.row - q2.row) == math.abs(q1.column - q2.column) 
+    q1.row == q2.row ||
+    q1.column == q2.column ||
+    math.abs(q1.row - q2.row) == math.abs(q1.column - q2.column)
   }
 }

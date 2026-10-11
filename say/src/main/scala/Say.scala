@@ -1,7 +1,19 @@
 object Say {
-  private val units = Array("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
-  private val teens = Array("ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen")
-  private val tens = Array("twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety")
+  private val units =
+    Array("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+  private val teens = Array(
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen")
+  private val tens =
+    Array("twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety")
   private val thousands = Array("", "thousand", "million", "billion")
 
   def inEnglish(number: Long): Option[String] = {
@@ -24,7 +36,8 @@ object Say {
     val hundred = chunk / 100
     val rest = chunk % 100
     val hundredPart = if (hundred > 0) s"${units(hundred)} hundred" else ""
-    val restPart = if (rest == 0) "" else if (rest < 10) units(rest)
+    val restPart = if (rest == 0) ""
+    else if (rest < 10) units(rest)
     else if (rest < 20) teens(rest - 10)
     else {
       val ten = rest / 10

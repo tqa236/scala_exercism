@@ -6,7 +6,7 @@ object Alphametics {
   def solve(puzzle: String): Option[Map[Char, Int]] = {
     // Extract the unique letters from the puzzle
     val letters = extractLetters(puzzle)
-    if (letters.size > 10) return None  // There are only 10 digits, can't have more than 10 letters
+    if (letters.size > 10) return None // There are only 10 digits, can't have more than 10 letters
 
     // Generate all permutations of digits for the letters
     val permutations = generatePermutations(letters.size)
@@ -37,7 +37,7 @@ object Alphametics {
     val puzzleWithDigits = puzzle.map {
       case letter if letter.isLetter => letterToDigit(letter).toString
       case char => char.toString
-    }.mkString  // Convert the sequence back into a string
+    }.mkString // Convert the sequence back into a string
 
     // Now split the puzzle into left and right parts at "=="
     val splitPuzzle = puzzleWithDigits.split("==")

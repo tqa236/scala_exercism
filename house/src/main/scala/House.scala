@@ -1,5 +1,5 @@
 object House {
-    
+
   private val parts = List(
     "the horse and the hound and the horn that belonged to",
     "the farmer sowing his corn that kept",

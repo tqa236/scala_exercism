@@ -6,11 +6,11 @@ import Schedule.Schedule
 case class Meetup(month: Int, year: Int) {
 
   def day(dayOfWeek: DayOfWeek, schedule: Schedule): LocalDate = {
-      val startDay = schedule match {
-          case Schedule.Last => schedule.id + LocalDate.of(year, month, 1).lengthOfMonth
-          case _ => schedule.id
-      }
-      LocalDate.of(year, month, startDay).`with`(nextOrSame(dayOfWeek))
+    val startDay = schedule match {
+      case Schedule.Last => schedule.id + LocalDate.of(year, month, 1).lengthOfMonth
+      case _ => schedule.id
+    }
+    LocalDate.of(year, month, startDay).`with`(nextOrSame(dayOfWeek))
   }
 
 }

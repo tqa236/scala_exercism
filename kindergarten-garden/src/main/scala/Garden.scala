@@ -10,7 +10,7 @@ object Plant:
       case 'V' => Plant.Violets
       case 'R' => Plant.Radishes
       case 'C' => Plant.Clover
-      case _   => throw new IllegalArgumentException("Invalid plant character")
+      case _ => throw new IllegalArgumentException("Invalid plant character")
 
 class Garden(rows: Array[Array[Char]]):
   def plants(name: String): List[Plant] =
